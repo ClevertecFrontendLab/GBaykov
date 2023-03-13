@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { HOST } from '../../constants';
+import { authHeader } from '../../services/auth/auth-header';
 import { AllBooksSuccess, GetAllBooksRequest } from '../../types/books';
+import { axiosInstance } from '../api';
 
 interface BooksState {
   books: AllBooksSuccess | [];
@@ -26,7 +28,11 @@ const initialState: BooksState = {
 export const fetchAllBooks = createAsyncThunk(
   'books/fetchAllBooks',
   async (obj, { dispatch, getState }) => {
-    const response = await axios.get<AllBooksSuccess>(`${HOST}/api/books`);
+    const response = await axiosInstance.get<AllBooksSuccess>(`${HOST}/api/books`, {
+      headers: {
+        Authorization: authHeader(),
+      },
+    });
     return response.data;
   },
   {
