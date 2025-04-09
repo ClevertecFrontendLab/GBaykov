@@ -1,6 +1,5 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
-    Box,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
@@ -15,11 +14,11 @@ import { Logo } from '~/icons/logo';
 import { Pot } from '~/icons/pot';
 
 const Header = () => (
-    <Flex>
-        <Box>
+    <Flex backgroundColor='lime.50' justifyContent='space-between' p='16px 56px 16px 16px'>
+        <Flex maxWidth='256px' w='100%'>
             <Pot /> <Logo />
-        </Box>
-        <Box>
+        </Flex>
+        <Flex w='100%' justifyContent='space-between'>
             <Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
                 <BreadcrumbItem>
                     <BreadcrumbLink href='#'>Home</BreadcrumbLink>
@@ -40,7 +39,7 @@ const Header = () => (
                     <Text>@bake_and_pie</Text>
                 </VStack>
             </Flex>
-        </Box>
+        </Flex>
     </Flex>
 );
 

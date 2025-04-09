@@ -8,13 +8,13 @@ import { Navbar } from '~/components/navbar/navbar';
 
 function App() {
     return (
-        <>
+        <Flex w='100%' flexDirection='column'>
             <Header />
-            <Flex>
+            <Flex w='100%'>
                 <Navbar />
                 <Outlet />
             </Flex>
-        </>
+        </Flex>
     );
 }
 
