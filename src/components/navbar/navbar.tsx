@@ -18,8 +18,8 @@ export const Navbar = () => {
     const navigate = useNavigate();
     return (
         <List w='256px' spacing={3}>
-            {NAVIGATION_ITEMS.map((item) => (
-                <ListItem>
+            {NAVIGATION_ITEMS.map((item, index) => (
+                <ListItem key={item.link + index}>
                     <Accordion allowToggle>
                         <AccordionItem>
                             <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
@@ -40,10 +40,8 @@ export const Navbar = () => {
                             <AccordionPanel>
                                 {item.tabs.map((tab) => (
                                     <Text
-                                        onClick={() => {
-                                            console.log(item.link);
-                                            navigate(`${item.link}/${tab.link}`);
-                                        }}
+                                        key={tab.link}
+                                        onClick={() => navigate(`${item.link}/${tab.link}`)}
                                     >
                                         {tab.text}
                                     </Text>

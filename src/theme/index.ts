@@ -20,7 +20,7 @@ export const theme = extendTheme({
         white: '#fff',
         gray: {
             50: '#f7fafc',
-            // ...
+            800: '#1a202c',
             900: '#171923',
         },
         lime: {
@@ -44,6 +44,16 @@ export const theme = extendTheme({
         main: 'Inter, sans-serif',
         secondFamily: 'Roboto, sans-serif',
     },
+
+    fontWeights: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+        black: 900,
+    },
     fontSizes: {
         xs: '0.75rem', //12
         sm: '0.875rem', //14
@@ -54,15 +64,6 @@ export const theme = extendTheme({
         '3xl': '1.875rem', //24
         '4xl': '2.25rem', //36
         '5xl': '3rem', //48
-    },
-    fontWeights: {
-        light: 300,
-        normal: 400,
-        medium: 500,
-        semibold: 600,
-        bold: 700,
-        extrabold: 800,
-        black: 900,
     },
     lineHeights: {
         normal: 'normal',

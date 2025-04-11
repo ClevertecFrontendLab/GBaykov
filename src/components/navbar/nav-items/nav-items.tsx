@@ -11,17 +11,7 @@ import second from './icons/second.png';
 import therapeutic from './icons/therapeutic.png';
 import vegans_icon from './icons/vegans.png';
 import workpieces from './icons/workpieces.png';
-
-type NavItemTab = {
-    link: string;
-    text: string;
-};
-type NavItem = {
-    icon: string;
-    text: string;
-    link: string;
-    tabs: NavItemTab[];
-};
+import { NavItem } from './types';
 
 export const NAVIGATION_ITEMS: NavItem[] = [
     {

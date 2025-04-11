@@ -11,9 +11,14 @@ export const AppRoutes = () => (
         <Route path='/' element={<App />}>
             <Route path={`${PATHS.MAIN}`} element={<MainPage />} />
             {PATHS.FOOD_VARIANTS.map((variant) => (
-                <Route path={`${variant}/:tab`} element={<FoodPage />}>
-                    <Route path={`${variant}/:tab/:recipeID`} element={<FoodPage />}></Route>
-                </Route>
+                <Route key={variant} path={`${variant}`} element={<FoodPage />} />
+            ))}
+            {PATHS.FOOD_VARIANTS.map((variant, index) => (
+                <Route
+                    key={`${variant + index}/:tab`}
+                    path={`${variant}/:tab`}
+                    element={<FoodPage />}
+                />
             ))}
         </Route>
     </Routes>
