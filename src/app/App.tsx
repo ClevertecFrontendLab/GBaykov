@@ -10,7 +10,7 @@ function App() {
     return (
         <Flex w='100%' flexDirection='column'>
             <Header />
-            <Flex w='100%'>
+            <Flex w='100%' h='calc(100vh - 80px)'>
                 <Navbar />
                 <Outlet />
             </Flex>

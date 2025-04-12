@@ -8,7 +8,7 @@ import Breadcrumbs from '../breadcrumbs/Breadcrumb';
 
 const Header = () => (
     <Flex backgroundColor='lime.50' justifyContent='space-between' p='16px 56px 16px 16px'>
-        <Flex maxWidth='256px' w='100%'>
+        <Flex maxWidth='256px' w='100%' gap='7px'>
             <Pot /> <Logo />
         </Flex>
         <Flex w='100%' justifyContent='space-between'>

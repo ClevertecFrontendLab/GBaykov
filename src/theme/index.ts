@@ -11,6 +11,7 @@ export const theme = extendTheme({
             100: 'rgba(255, 255, 255, 0.06)',
         },
         blackAlpha: {
+            50: 'rgba(0, 0, 0, 0.04)',
             200: 'rgba(0, 0, 0, 0.08)',
             300: 'rgba(0, 0, 0, 0.16)',
             600: 'rgba(0, 0, 0, 0.48)',
@@ -25,6 +26,7 @@ export const theme = extendTheme({
         },
         lime: {
             50: '#ffffd3',
+            100: '#eaffc7',
             150: '#d7ff94',
             300: '#c4ff61',
             400: '#b1ff2e',
