@@ -1,4 +1,3 @@
-import './index.css';
 import './reset.css';
 
 import { ChakraProvider } from '@chakra-ui/react';

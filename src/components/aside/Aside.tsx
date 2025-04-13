@@ -6,20 +6,25 @@ import UserNotification from '../userNotifications/UserNotifications';
 
 export const Aside = () => (
     <Flex
-        display={{ base: 'none', lg: 'flex' }}
         as='aside'
-        w='208px'
-        h='calc(100vh - 80px)'
-        pt={4}
         flexDirection='column'
         justifyContent='space-between'
         alignContent='flex-end'
+        display={{ base: 'none', lg: 'flex' }}
+        w='250px'
+        h='calc(100vh - 80px - 16px)'
+        pt={4}
+        position='fixed'
+        right={0}
     >
         <UserNotification direction='vertical' />
 
         <Center
             boxSize={52}
-            position='relative'
+            // position='relative'
+            position='fixed'
+            bottom={0}
+            right='10px'
             bgGradient='radial(30% 30% at 50% 50%, #C4FF61 0%, #FFFFFF 100%)'
             flexDirection='column'
             cursor='pointer'

@@ -7,7 +7,17 @@ import { Pot } from '~/icons/pot';
 import Breadcrumbs from '../breadcrumbs/Breadcrumb';
 
 const Header = () => (
-    <Flex backgroundColor='lime.50' justifyContent='space-between' p='16px 56px 16px 16px'>
+    <Flex
+        as='header'
+        backgroundColor='lime.50'
+        justifyContent='space-between'
+        p='16px 56px 16px 16px'
+        position='fixed'
+        top='0'
+        left='0'
+        w='100%'
+        zIndex='docked'
+    >
         <Flex maxWidth='256px' w='100%' gap='7px'>
             <Pot /> <Logo />
         </Flex>

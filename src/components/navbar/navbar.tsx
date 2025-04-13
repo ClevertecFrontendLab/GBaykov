@@ -1,4 +1,4 @@
-import './navbat.css';
+// import './navbat.css';
 
 import {
     Accordion,
@@ -56,11 +56,15 @@ export const Navbar = () => {
     });
     return (
         <Flex
+            as='nav'
+            flexShrink={0}
             display={{ base: 'none', lg: 'flex' }}
             w='256px'
             direction='column'
             justifyContent='space-between'
-            h='100%'
+            h='calc(100vh - 80px)'
+            zIndex='sticky'
+            position='fixed'
             margin='0px'
             padding='24px 0px 0px 0px'
             boxShadow={navBarShadow}
@@ -77,6 +81,20 @@ export const Navbar = () => {
                     boxShadow:
                         '0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                     borderRadius: '12px',
+                }}
+                css={{
+                    '&::-webkit-scrollbar': {
+                        width: '8px',
+                    },
+                    '&::-webkit-scrollbar-track': {
+                        width: '8px',
+                        background: 'rgba(0, 0, 0, 0.04)',
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        background: 'rgba(0, 0, 0, 0.16)',
+                        borderRadius: '8px',
+                    },
+                    scrollbarGutter: 'stable',
                 }}
             >
                 {NAVIGATION_ITEMS.map((item, index) => (

@@ -16,7 +16,7 @@ const UserNotification: FC<UserNotificationType> = ({ direction = 'horizontal' }
             actionIcon={<SavedIcon />}
             text='185'
             color='lime.600'
-            px={2}
+            // px={2}
             lineHeight='sesquialteral'
             fontSize='md'
         />
@@ -24,7 +24,6 @@ const UserNotification: FC<UserNotificationType> = ({ direction = 'horizontal' }
             actionIcon={<VisitsIcon />}
             text='589'
             color='lime.600'
-            px={2}
             lineHeight='sesquialteral'
             fontSize='md'
         />
@@ -32,7 +31,6 @@ const UserNotification: FC<UserNotificationType> = ({ direction = 'horizontal' }
             actionIcon={<LikesIcon />}
             text='587'
             color='lime.600'
-            px={2}
             lineHeight='sesquialteral'
             fontSize='md'
         />

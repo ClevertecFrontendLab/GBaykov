@@ -1,3 +1,7 @@
+html {
+    overflow-y: 'auto';
+    min-height: '100dvh';
+}
 #root {
     max-width: 1920px;
     width: 100%;
