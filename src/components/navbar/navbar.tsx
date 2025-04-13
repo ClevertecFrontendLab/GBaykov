@@ -73,6 +73,11 @@ export const Navbar = () => {
                 maxHeight='872px'
                 overflow='auto'
                 p='10px 16px 10px 10px'
+                _hover={{
+                    boxShadow:
+                        '0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                    borderRadius: '12px',
+                }}
             >
                 {NAVIGATION_ITEMS.map((item, index) => (
                     <AccordionItem key={item.link + index} border='none'>
