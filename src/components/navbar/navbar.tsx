@@ -65,6 +65,7 @@ export const Navbar = () => {
             h='calc(100vh - 80px)'
             zIndex='sticky'
             position='fixed'
+            left='0'
             margin='0px'
             padding='24px 0px 0px 0px'
             boxShadow={navBarShadow}

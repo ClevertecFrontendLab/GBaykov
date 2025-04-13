@@ -20,6 +20,7 @@ function App() {
                 // position='relative'
             >
                 <Container
+                    w='auto'
                     maxW='1920px'
                     px={{ base: 4, md: 5, lg: 2.5 }}
                     pb={{ base: '110px', md: 25, lg: 0 }}
@@ -30,7 +31,7 @@ function App() {
                             maxW={{ base: '100%', lg: '880px', xl: '1360px' }}
                             h='calc(100vh - 80px)'
                             pt={{ base: 4, lg: 8 }}
-                            ml={{ base: 0, lg: '280px' }}
+                            // ml={{ base: 0, lg: '280px' }}
                             css={{
                                 '&::-webkit-scrollbar': {
                                     display: 'none',
