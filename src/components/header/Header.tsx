@@ -1,6 +1,6 @@
 import { Flex, Image, Text, useMediaQuery, VStack } from '@chakra-ui/react';
 
-import user_photo from '~/assets/user_photo.png';
+import user_photo from '~/assets/images/user_photo.png';
 import { Logo } from '~/icons/logo';
 import { Pot } from '~/icons/pot';
 

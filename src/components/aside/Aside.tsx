@@ -1,6 +1,6 @@
 import { Center, Flex, Image, Text } from '@chakra-ui/react';
 
-import saveRecie from '~/assets/save-recipe.svg';
+import saveRecie from '~/assets/icons/save-recipe.svg';
 
 import UserNotification from '../userNotifications/UserNotifications';
 

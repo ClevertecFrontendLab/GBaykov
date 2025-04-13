@@ -1,6 +1,6 @@
 import { StyleFunctionProps } from '@chakra-ui/react';
 
-export const Button = {
+export const ButtonTheme = {
     baseStyle: {
         fontWeight: 'semibold',
         borderRadius: 'md',

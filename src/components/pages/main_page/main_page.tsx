@@ -1,7 +1,10 @@
-import { Flex, Heading } from '@chakra-ui/react';
+import PagesHeading from '~/components/pagesHeading/pagesHeading';
+
+import NewRecipes from './newRecipes/NewRecipes';
 
 export const MainPage = () => (
-    <Flex>
-        <Heading>Приятного аппетита</Heading>
-    </Flex>
+    <>
+        <PagesHeading title='Приятного аппетита!' />
+        <NewRecipes />
+    </>
 );
