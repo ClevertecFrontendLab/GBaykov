@@ -12,24 +12,25 @@ const AdditionalRecipeCard = ({
     recipe: AdditionalRecipe;
 }) => (
     <Card
+        boxShadow='none'
         border='1px solid'
         borderColor='blackAlpha.200'
         borderRadius={8}
-        p={3}
+        p={{ base: 3, lg: 4, '2xl': '24px 24px 20px 24px' }}
         w={{ base: '100%', '2xl': '322px' }}
+        maxH={{ base: '168px', lg: '180px', '2xl': '192px' }}
         _hover={{
             boxShadow:
                 '0 2px 4px -1px rgba(32, 126, 0, 0.06), 0 4px 6px -1px rgba(32, 126, 0, 0.1)',
         }}
     >
-        <Box display='flex' flexDirection='column' gap={6}>
-            <Box display='flex' flexDirection='column' gap={2}>
+        <Box display='flex' flexDirection='column' gap='24px'>
+            <Box display='flex' flexDirection='column' gap='8px'>
                 <Text
                     isTruncated
-                    as='h3'
-                    fontSize='md'
                     fontWeight='medium'
-                    lineHeight='sesquialteral'
+                    fontSize={{ base: 'md', lg: 'xl' }}
+                    lineHeight={{ base: 'sesquialteral', lg: 'base' }}
                 >
                     {title}
                 </Text>
@@ -37,7 +38,7 @@ const AdditionalRecipeCard = ({
                     {description}
                 </Text>
             </Box>
-            <Flex justifyContent='space-between'>
+            <Flex justifyContent='space-between' maxH='24px'>
                 <Flex
                     alignItems='center'
                     bg='lime.50'

@@ -26,6 +26,9 @@ const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
     const { category, image, title, description, icons, recommendation } = recipe;
     return (
         <Card
+            boxShadow='none'
+            border='1px solid'
+            borderColor='blackAlpha.200'
             display='flex'
             flexDirection='row'
             w='100%'

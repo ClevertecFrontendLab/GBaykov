@@ -11,10 +11,12 @@ const ShortCard = ({
     recipe: AdditionalRecipe;
 }) => (
     <Card
+        boxShadow='none'
         border='1px solid'
         borderColor='blackAlpha.200'
         borderRadius={8}
-        p={3}
+        p='10px 12px'
+        maxH='52px'
         w={{ base: '100%', '2xl': '668px' }}
         _hover={{
             boxShadow:

@@ -25,6 +25,9 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
     const { category, image, title, description, icons } = recipe;
     return (
         <Card
+            boxShadow='none'
+            border='1px solid'
+            borderColor='blackAlpha.200'
             minW={{ base: '158px', xl: '277px', '2xl': '322px' }}
             borderRadius={8}
             pb={{ base: '4px', md: '8px', lg: '12px', '2xl': '20px' }}

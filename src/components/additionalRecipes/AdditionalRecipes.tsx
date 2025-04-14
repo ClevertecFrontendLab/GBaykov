@@ -31,7 +31,6 @@ const AdditionalRecipes: FC<AdditionalRecipesProps> = ({ title, description }) =
                     flexShrink={0}
                 >
                     {title || `Веганская кухня`}
-                    {/* Веганская кухня */}
                 </Heading>
                 <Text
                     fontSize={{ base: '0.875rem', xl: '1rem' }}
