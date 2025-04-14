@@ -69,7 +69,7 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
             {/* <Flex>
 
             </Flex> */}
-            <CardBody p={{ base: '8x', lg: '12px 12px 24px 12px', '2xl': '16px 24px 24px 24px' }}>
+            <CardBody p={{ base: '8px', lg: '12px 12px 24px 12px', '2xl': '16px 24px 24px 24px' }}>
                 <Text
                     mb={2}
                     noOfLines={{ base: 2, lg: 1 }}
@@ -86,7 +86,10 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                     </Text>
                 </Show>
             </CardBody>
-            <CardFooter p={{ lg: '0 12px', xl: '0 24px' }} justifyContent='space-between'>
+            <CardFooter
+                p={{ base: '0 8px', lg: '0 12px', xl: '0 24px' }}
+                justifyContent='space-between'
+            >
                 <Show above='lg'>
                     {category.icon && (
                         <Box
