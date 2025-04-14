@@ -1,13 +1,15 @@
 import './App.css';
 
-import { Box, Container, Flex, HStack } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, useMediaQuery } from '@chakra-ui/react';
 import { Outlet } from 'react-router';
 
 import { Aside } from '~/components/aside/Aside';
+import Footer from '~/components/footer/Footer';
 import Header from '~/components/header/Header';
 import { Navbar } from '~/components/navbar/navbar';
 
 function App() {
+    const [isLargerThan768] = useMediaQuery('(min-width: 769px)');
     return (
         <Flex flexDirection='column'>
             <Header />
@@ -43,6 +45,7 @@ function App() {
                     </HStack>
                 </Container>
             </Flex>
+            {!isLargerThan768 && <Footer />}
         </Flex>
     );
 }
