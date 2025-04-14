@@ -55,7 +55,7 @@ img {
 
 img,
 svg {
-    max-width: max-content;
+    /* max-width: max-content; */
     height: auto;
 }
 

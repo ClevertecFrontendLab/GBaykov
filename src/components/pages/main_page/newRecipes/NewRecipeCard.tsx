@@ -25,9 +25,9 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
     const { category, image, title, description, icons } = recipe;
     return (
         <Card
-            minW={{ base: '158px', lg: '277px', xl: '322px' }}
+            minW={{ base: '158px', xl: '277px', '2xl': '322px' }}
             borderRadius={8}
-            pb={{ lg: 3 }}
+            pb={{ base: '4px', md: '8px', lg: '12px', '2xl': '20px' }}
             _hover={{
                 boxShadow:
                     '0 2px 4px -1px rgba(32, 126, 0, 0.06), 0 4px 6px -1px rgba(32, 126, 0, 0.1)',
@@ -63,24 +63,27 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                     h={{ base: '128px', lg: '230px' }}
                 />
             </CardHeader>
-            <CardBody p={{ base: 2, lg: 3 }}>
+            {/* <Flex>
+
+            </Flex> */}
+            <CardBody p={{ base: '8x', lg: '12px 12px 24px 12px', '2xl': '16px 24px 24px 24px' }}>
                 <Text
+                    mb={2}
                     noOfLines={{ base: 2, lg: 1 }}
-                    as='h3'
                     fontSize={{ base: 'md', lg: 'lg', xl: 'xl' }}
-                    lineHeight={{ base: 'sesquialteral', xl: 'base' }}
+                    lineHeight={{ base: 'sesquialteral', lg: 'tall', xl: 'base' }}
                     fontWeight='medium'
                     textAlign='start'
                 >
                     {title}
                 </Text>
                 <Show above='lg'>
-                    <Text noOfLines={3} fontSize='sm' textAlign='start' lineHeight='base'>
+                    <Text h='64px' noOfLines={3} fontSize='sm' lineHeight='base' textAlign='start'>
                         {description}
                     </Text>
                 </Show>
             </CardBody>
-            <CardFooter py={0} p={2} mt={{ lg: 3 }} justifyContent='space-between'>
+            <CardFooter p={{ lg: '0 12px', xl: '0 24px' }} justifyContent='space-between'>
                 <Show above='lg'>
                     {category.icon && (
                         <Box
@@ -88,7 +91,7 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                             alignItems='center'
                             bg='lime.150'
                             borderRadius={4}
-                            padding='2px 8px'
+                            // padding='2px 8px'
                             gap={2}
                             h={6}
                         >
@@ -99,7 +102,7 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                         </Box>
                     )}
                 </Show>
-                <ButtonGroup gap={2} p={1}>
+                <ButtonGroup gap={2}>
                     {icons.map(({ actionIcon, value }, i) => (
                         <ActionButton
                             actionIcon={actionIcon === 'saved' ? <SavedIcon /> : <LikesIcon />}
