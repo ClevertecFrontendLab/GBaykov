@@ -62,8 +62,8 @@ export const theme = extendTheme({
         md: '1rem', //16
         lg: '1.125rem', //18
         xl: '1.25rem', //20
-        '2xl': '1.5rem', //22
-        '3xl': '1.875rem', //24
+        '2xl': '1.5rem', //24
+        '3xl': '1.875rem', //30
         '4xl': '2.25rem', //36
         '5xl': '3rem', //48
     },

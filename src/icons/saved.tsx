@@ -1,8 +1,8 @@
 export const SavedIcon = () => (
     <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path
-            fill-rule='evenodd'
-            clip-rule='evenodd'
+            fillRule='evenodd'
+            clipRule='evenodd'
             d='M7.9998 4.41007C9.3868 2.98507 12.8538 5.48007 7.9998 8.68707C3.1458 5.48007 6.6128 2.98607 7.9998 4.41207V4.41007Z'
             fill='black'
         />

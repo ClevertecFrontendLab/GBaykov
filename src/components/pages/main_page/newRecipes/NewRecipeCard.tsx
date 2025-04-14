@@ -13,12 +13,12 @@ import {
 import { FC } from 'react';
 
 import { ActionButton } from '~/components/ActionButton/ActionButton';
-import { NewRecipeType } from '~/components/database/newRecipesData';
 import { LikesIcon } from '~/icons/likes';
 import { SavedIcon } from '~/icons/saved';
+import { RecipeCardType } from '~/types';
 
 export type RecipeProps = {
-    recipe: NewRecipeType;
+    recipe: RecipeCardType;
 };
 
 const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {

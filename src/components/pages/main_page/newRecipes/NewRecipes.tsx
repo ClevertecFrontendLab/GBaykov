@@ -9,8 +9,8 @@ const NewRecipes = () => (
     <Box as='section' mt={8} position='relative'>
         <Heading
             fontWeight='medium'
-            fontSize={{ base: '1.5rem', lg: '2.25rem', xl: '3rem' }}
-            lineHeight={{ base: 'short', lg: 1.11, xl: 1 }}
+            fontSize={{ base: '2xl', xl: '4xl', '2xl': '5xl' }}
+            lineHeight={{ base: 'short', xl: 1.11, '2xl': 1 }}
             textAlign='start'
         >
             Новые рецепты

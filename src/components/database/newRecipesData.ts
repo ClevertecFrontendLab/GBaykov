@@ -1,21 +1,11 @@
+import { RecipeCardType } from '~/types';
+
 import desserts from '../navbar/nav-items/icons/desserts.png';
 import first from '../navbar/nav-items/icons/first.png';
 import salads from '../navbar/nav-items/icons/salads.png';
 import vegans_icon from '../navbar/nav-items/icons/vegans.png';
 
-export type NewRecipeType = {
-    id: string;
-    category: {
-        icon: string;
-        value: string;
-    };
-    image: string;
-    title: string;
-    description: string;
-    icons: { actionIcon: 'saved' | 'like'; value: string }[];
-};
-
-export const newRecipesData: NewRecipeType[] = [
+export const newRecipesData: RecipeCardType[] = [
     {
         id: '1',
         category: {

@@ -5,8 +5,8 @@ export const VisitsIcon = () => (
             fill='black'
         />
         <path
-            fill-rule='evenodd'
-            clip-rule='evenodd'
+            fillRule='evenodd'
+            clipRule='evenodd'
             d='M5.216 13.9999C5.06775 13.6878 4.99382 13.3455 5 12.9999C5 11.6449 5.68 10.2499 6.936 9.27994C6.30909 9.08677 5.65595 8.99231 5 8.99994C1 8.99994 0 11.9999 0 12.9999C0 13.9999 1 13.9999 1 13.9999H5.216Z'
             fill='black'
         />
