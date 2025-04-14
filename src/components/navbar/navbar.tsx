@@ -1,5 +1,3 @@
-// import './navbat.css';
-
 import {
     Accordion,
     AccordionButton,
@@ -21,12 +19,20 @@ import { NAVIGATION_ITEMS } from './nav-items/nav-items';
 export const Navbar = () => {
     const navigate = useNavigate();
     const pathanames = useLocation().pathname.split('/');
-
+    const [, , tabPatname]: string[] = pathanames;
     const [activeTab, setActivTab] = useState(pathanames[2] || '');
     const navBarShadow =
         '0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12)';
 
     const scrollableBlockRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        setActivTab(tabPatname);
+    }, [pathanames]);
+
+    function onNavBarItemClick(link: string, tab: string) {
+        navigate(`${link}/${tab}`);
+    }
 
     useEffect(() => {
         const checkScroll = () => {
@@ -103,7 +109,7 @@ export const Navbar = () => {
                             <>
                                 {' '}
                                 <AccordionButton
-                                    onClick={() => navigate(`/${item.link}`)}
+                                    onClick={() => onNavBarItemClick(item.link, item.tabs[0].link)}
                                     data-test-id={item.link === 'vegans' && 'vegan-cuisine'}
                                     p='12px 8px'
                                     justifyContent='space-between'
@@ -138,10 +144,7 @@ export const Navbar = () => {
                                         <Flex
                                             key={tab.link + index}
                                             alignContent='center'
-                                            onClick={() => {
-                                                navigate(`${item.link}/${tab.link}`);
-                                                setActivTab(tab.link);
-                                            }}
+                                            onClick={() => onNavBarItemClick(item.link, tab.link)}
                                             gap='11px'
                                             p={
                                                 activeTab === tab.link
