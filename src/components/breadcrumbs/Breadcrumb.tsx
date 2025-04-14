@@ -16,13 +16,16 @@ const Breadcrumbs = () => {
 
     function getBradcrumbsData() {
         const breads = [{ link: '/', text: 'Главная' }];
+        if (fitrstLvlathname === 'juciest') {
+            breads.push({ link: fitrstLvlathname, text: 'Самое сочное' });
+        }
+
         const navItem = NAVIGATION_ITEMS.find((item) => item.link === fitrstLvlathname);
         if (navItem) breads.push({ link: navItem?.link, text: navItem?.text });
         const navItemTab = navItem?.tabs.find((item) => item.link === secondLvlPatname);
         if (navItemTab) breads.push({ link: navItemTab?.link, text: navItemTab?.text });
         return breads;
     }
-
     useEffect(() => {
         const breads = getBradcrumbsData();
         setBreadcrumbsData(breads);

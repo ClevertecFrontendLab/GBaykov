@@ -21,6 +21,7 @@ const Header = () => {
             left='0'
             w='100%'
             zIndex='docked'
+            data-test-id='header'
         >
             <Flex maxWidth='256px' w='100%' gap='7px'>
                 <Pot /> {is768AndLarge && <Logo />}
@@ -54,25 +55,6 @@ const Header = () => {
                             </Text>
                         </VStack>
                     </Flex>
-                    {/* {is992AndLarge && <Breadcrumbs />}
-                    {is992AndLarge && (
-                        <Flex gap={4}>
-                            <Image
-                                borderRadius='full'
-                                boxSize='48px'
-                                src={user_photo}
-                                alt='User photo'
-                            />
-                            <VStack spacing={0} align='start'>
-                                <Text fontSize='lg' fontWeight='medium' lineHeight='tall'>
-                                    Екатерина Константинопольская
-                                </Text>
-                                <Text fontSize='sm' fontWeight='normal' lineHeight='base'>
-                                    @bake_and_pie
-                                </Text>
-                            </VStack>
-                        </Flex>
-                    )} */}
                 </Flex>
             </Show>
         </Flex>

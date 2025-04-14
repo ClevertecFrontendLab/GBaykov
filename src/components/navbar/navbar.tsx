@@ -27,7 +27,6 @@ export const Navbar = () => {
         '0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12)';
 
     const scrollableBlockRef = useRef<HTMLDivElement | null>(null);
-    console.log(scrollableBlockRef?.current);
 
     useEffect(() => {
         const checkScroll = () => {
@@ -104,6 +103,8 @@ export const Navbar = () => {
                             <>
                                 {' '}
                                 <AccordionButton
+                                    onClick={() => navigate(`/${item.link}`)}
+                                    data-test-id={item.link === 'vegans' && 'vegan-cuisine'}
                                     p='12px 8px'
                                     justifyContent='space-between'
                                     _expanded={{ bg: 'lime.100' }}

@@ -39,7 +39,6 @@ const AdditionalRecipeCard = ({
             </Box>
             <Flex justifyContent='space-between'>
                 <Flex
-                    // display='flex'
                     alignItems='center'
                     bg='lime.50'
                     borderRadius={4}

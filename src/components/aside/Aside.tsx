@@ -21,7 +21,6 @@ export const Aside = () => (
 
         <Center
             boxSize={52}
-            // position='relative'
             position='fixed'
             bottom={0}
             right='10px'

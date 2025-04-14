@@ -14,4 +14,3 @@ export const MainPage = () => (
         <AdditionalRecipes />
     </>
 );
-//title='' description=''

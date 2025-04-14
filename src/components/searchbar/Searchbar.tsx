@@ -18,13 +18,7 @@ import { FilterIcon } from '~/icons/filter';
 const Searchbar = () => (
     <>
         <Flex justifyContent='center' width='100%' gap={3} mt={{ lg: 6 }}>
-            <Center
-                border='1px solid'
-                borderColor='blackAlpha.600'
-                borderRadius={6}
-                // boxSize={{ base: 8, lg: 12 }}
-                flexShrink={0}
-            >
+            <Center border='1px solid' borderColor='blackAlpha.600' borderRadius={6} flexShrink={0}>
                 <Container display={{ base: 'block', lg: 'none' }}>
                     <FilterIcon width='12px' height='8px' />
                 </Container>
@@ -32,12 +26,7 @@ const Searchbar = () => (
                     <FilterIcon width='18px' height='11px' />
                 </Container>
             </Center>
-            <InputGroup
-                // border='1px solid'
-                borderColor='blackAlpha.600'
-                borderRadius={4}
-                maxW={{ base: 404, lg: 458 }}
-            >
+            <InputGroup borderColor='blackAlpha.600' borderRadius={4} maxW={{ base: 404, lg: 458 }}>
                 <Input
                     placeholder='Название или ингредиент...'
                     fontWeight='normal'

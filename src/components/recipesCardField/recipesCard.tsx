@@ -70,6 +70,7 @@ const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
                     </Box>
                 )}
                 <Image
+                    maxW='346px'
                     src={image}
                     w={{ base: '158px', xl: '346px' }}
                     h={{ base: '128px', xl: '244px' }}
@@ -84,7 +85,6 @@ const RecipeCard: FC<RecipeCardProps> = ({ recipe }) => {
                 display='flex'
                 flexDirection='column'
                 justifyContent='space-between'
-                // maxW={{ xl: '322px' }}
             >
                 <Box>
                     <HStack justifyContent='space-between'>

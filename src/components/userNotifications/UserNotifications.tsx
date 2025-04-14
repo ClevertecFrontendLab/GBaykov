@@ -16,7 +16,6 @@ const UserNotification: FC<UserNotificationType> = ({ direction = 'horizontal' }
             actionIcon={<SavedIcon />}
             text='185'
             color='lime.600'
-            // px={2}
             lineHeight='sesquialteral'
             fontSize='md'
         />

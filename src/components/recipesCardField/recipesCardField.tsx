@@ -15,7 +15,6 @@ interface MostDeliciousProps {
 const RecipesCardField: FC<MostDeliciousProps> = ({ isMainPage }) => {
     const [isLargerThan768] = useMediaQuery('(min-width: 769px)');
     const cardsData = isMainPage ? recipesCardsData.slice(0, 4) : recipesCardsData;
-    console.log(recipesCardsData);
 
     return (
         <Box
@@ -67,15 +66,17 @@ const RecipesCardField: FC<MostDeliciousProps> = ({ isMainPage }) => {
                     w='max-content'
                     as={NavLink}
                     to={PATHS.JUCIEST}
-                    display={isLargerThan768 ? 'none ' : 'inline-flex'}
-                    visibility={{ base: 'visible', lg: 'hidden' }}
                     mx='auto'
                     rightIcon={<ArrowForwardIcon />}
+                    data-test-id='juiciest-link-mobile'
+                    visibility={isLargerThan768 ? 'hidden' : 'visible'}
                 >
                     Вся подборка
                 </Button>
             ) : (
-                <Button variant='lime'> Загрузить еще</Button>
+                <Button variant='lime' w='max-content' mx='auto'>
+                    Загрузить еще
+                </Button>
             )}
         </Box>
     );

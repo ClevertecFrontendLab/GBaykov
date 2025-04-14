@@ -29,7 +29,7 @@ const ShortCard = ({
             <Button
                 variant='outline'
                 flexShrink={0}
-                border='1px solid #2db100'
+                border='1px solid'
                 borderColor='lime.600'
                 borderRadius={6}
                 px={2}
