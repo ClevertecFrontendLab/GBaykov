@@ -108,7 +108,7 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                         </Box>
                     )}
                 </Show>
-                <ButtonGroup gap={2}>
+                <ButtonGroup h={6} gap={2}>
                     {icons.map(({ actionIcon, value }, i) => (
                         <ActionButton
                             actionIcon={actionIcon === 'saved' ? <SavedIcon /> : <LikesIcon />}
