@@ -4,8 +4,7 @@ import { Show } from '@chakra-ui/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { newRecipesData } from '~/components/database/newRecipesData';
-
+import { RECIPES } from '../database/recipes';
 import NewRecipeCard from '../pages/main_page/newRecipes/NewRecipeCard';
 import { SwiperButtonNext, SwiperButtonPrev } from './SliderButtons';
 
@@ -43,7 +42,7 @@ const Slider = () => (
                 <SwiperButtonNext />
                 <SwiperButtonPrev />
             </Show>
-            {newRecipesData.map((recipe) => (
+            {RECIPES.map((recipe) => (
                 <SwiperSlide>
                     <NewRecipeCard key={recipe.id} recipe={recipe}></NewRecipeCard>
                 </SwiperSlide>

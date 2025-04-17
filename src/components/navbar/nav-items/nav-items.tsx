@@ -1,4 +1,3 @@
-import appetizers from './icons/appetizers.png';
 import children from './icons/children.png';
 import desserts from './icons/desserts.png';
 import drinks from './icons/drinks.png';
@@ -8,6 +7,7 @@ import national from './icons/national.png';
 import salads from './icons/salads.png';
 import sauces from './icons/sauces.png';
 import second from './icons/second.png';
+import snacks from './icons/snacks.png';
 import therapeutic from './icons/therapeutic.png';
 import vegans_icon from './icons/vegans.png';
 import workpieces from './icons/workpieces.png';
@@ -19,21 +19,21 @@ export const NAVIGATION_ITEMS: NavItem[] = [
         text: 'Салаты',
         link: 'salads',
         tabs: [
-            { link: 'meat-salads', text: 'Мясные закуски' },
+            { link: 'snacks', text: 'Мясные закуски' },
             { link: 'fish-salads', text: 'Рыбные салаты' },
-            { link: 'vegetables-salads', text: 'Овощные салаты' },
+            { link: 'vegetables', text: 'Овощные салаты' },
             { link: 'warm-salads', text: 'Теплые салаты' },
         ],
     },
     {
-        icon: appetizers,
+        icon: snacks,
         text: 'Закуски',
-        link: 'appetizers',
+        link: 'snacks',
         tabs: [
-            { link: 'meat-appetizers', text: 'Мясные закуски' },
-            { link: 'fish-appetizers', text: 'Рыбные закуски' },
-            { link: 'vegetable-appetizers', text: 'Овощные закуски' },
-            { link: 'warm-appetizers', text: 'Теплые закуски' },
+            { link: 'meat-snacks', text: 'Мясные закуски' },
+            { link: 'fish-snacks', text: 'Рыбные закуски' },
+            { link: 'vegetables', text: 'Овощные закуски' },
+            { link: 'warm-snacks', text: 'Теплые закуски' },
             { link: 'sandwiches', text: 'Бутерброды' },
             { link: 'fastfood', text: 'Фастфуд' },
         ],
@@ -44,7 +44,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
         link: 'soups',
         tabs: [
             { link: 'meat-soups', text: 'Мясные супы' },
-            { link: 'vegetable-soups', text: 'Овощные супы' },
+            { link: 'vegetables', text: 'Овощные супы' },
             { link: 'broths', text: 'Бульоны' },
             { link: 'cold-soups', text: 'Холодные супы' },
             { link: 'diet-soups', text: 'Диетические супы' },
@@ -53,12 +53,12 @@ export const NAVIGATION_ITEMS: NavItem[] = [
     {
         icon: second,
         text: 'Вторые блюда',
-        link: 'second',
+        link: 'second-dish',
         tabs: [
             { link: 'meat', text: 'Мясные' },
             { link: 'fish', text: 'Рыбные' },
-            { link: 'vegetable', text: 'Овощные' },
-            { link: 'poultry', text: 'Из птицы' },
+            { link: 'vegetables', text: 'Овощные' },
+            { link: 'poultry-dish', text: 'Из птицы' },
             { link: 'mushrooms', text: 'Из грибов' },
             { link: 'offal', text: 'Из субпродуктов' },
             { link: 'steamed', text: 'На пару' },
@@ -96,21 +96,21 @@ export const NAVIGATION_ITEMS: NavItem[] = [
         tabs: [
             { link: 'grilled-beef', text: 'Говядина' },
             { link: 'grilled-pork', text: 'Свинина' },
-            { link: 'grilled-poultry', text: 'Птица' },
+            { link: 'poultry-dish', text: 'Птица' },
             { link: 'grilled-fish', text: 'Рыба' },
             { link: 'grilled-mushrooms', text: 'Грибы' },
-            { link: 'grilled-vegetables', text: 'Овощи' },
+            { link: 'vegetables', text: 'Овощи' },
         ],
     },
     {
         icon: vegans_icon,
         text: 'Веганская кухня',
-        link: 'vegans',
+        link: 'vegan',
         tabs: [
-            { link: 'appetizers', text: 'Закуски' },
+            { link: 'snacks', text: 'Закуски' },
             { link: 'first', text: 'Первые блюда' },
-            { link: 'second', text: 'Вторые блюда' },
-            { link: 'side_dishes', text: 'Гарниры' },
+            { link: 'second-dish', text: 'Вторые блюда' },
+            { link: 'side-dishes', text: 'Гарниры' },
             { link: 'desserts', text: 'Десерты' },
             { link: 'pastries', text: 'Выпечка' },
             { link: 'raw_food', text: 'Сыроедческие блюда' },
@@ -123,8 +123,8 @@ export const NAVIGATION_ITEMS: NavItem[] = [
         link: 'kids',
         tabs: [
             { link: 'kids-first', text: 'Первые блюда' },
-            { link: 'kids-second', text: 'Вторые блюда' },
-            { link: 'kids-side', text: 'Гарниры' },
+            { link: 'second-dish', text: 'Вторые блюда' },
+            { link: 'side-dishes', text: 'Гарниры' },
             { link: 'kids-bakery', text: 'Выпечка' },
             { link: 'kids-gluten-free', text: 'Без глютена' },
             { link: 'kids-sugar-free', text: 'Без сахара' },
@@ -191,7 +191,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
             { link: 'cucumber-preserves', text: 'Из огурцов' },
             { link: 'tomato-preserves', text: 'Из томатов' },
             { link: 'mushroom-preserves', text: 'Из грибов' },
-            { link: 'vegetable-preserves', text: 'Овощные заготовки' },
+            { link: 'vegetables', text: 'Овощные заготовки' },
             { link: 'salads-preserves', text: 'Салаты, икра' },
             { link: 'fruit-preserves', text: 'Из фруктов и ягод' },
         ],

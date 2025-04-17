@@ -15,14 +15,15 @@ import { FC } from 'react';
 import { ActionButton } from '~/components/ActionButton/ActionButton';
 import { LikesIcon } from '~/icons/likes';
 import { SavedIcon } from '~/icons/saved';
-import { RecipeCardType } from '~/types';
+import { Recipe } from '~/types';
 
 export type RecipeProps = {
-    recipe: RecipeCardType;
+    recipe: Recipe;
 };
 
 const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
-    const { category, image, title, description, icons } = recipe;
+    const { category, image, title, description, bookmarks, likes } = recipe;
+    // const icon = NAVIGATION_ITEMS;
     return (
         <Card
             boxShadow='none'
@@ -51,7 +52,7 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                     >
                         <Image src={category.icon} boxSize={4} />
                         <Text isTruncated as='span' fontSize='sm'>
-                            {category.value}
+                            {category.map((item) => item)}
                         </Text>
                     </Box>
                 )}
@@ -103,21 +104,30 @@ const NewRecipeCard: FC<RecipeProps> = ({ recipe }) => {
                         >
                             <Image src={category.icon} boxSize={4} />
                             <Text isTruncated as='span' fontSize='sm'>
-                                {category.value}
+                                {category.map((item) => item)}
                             </Text>
                         </Box>
                     )}
                 </Show>
                 <ButtonGroup h={6} gap={2}>
-                    {icons.map(({ actionIcon, value }, i) => (
+                    {bookmarks && (
                         <ActionButton
-                            actionIcon={actionIcon === 'saved' ? <SavedIcon /> : <LikesIcon />}
-                            text={value}
-                            key={i}
+                            actionIcon={<SavedIcon />}
+                            text={String(bookmarks)}
+                            key='bookmarks-count'
                             color='lime.600'
                             fontSize='xs'
                         />
-                    ))}
+                    )}
+                    {likes && (
+                        <ActionButton
+                            actionIcon={<LikesIcon />}
+                            text={String(likes)}
+                            key='likes-count'
+                            color='lime.600'
+                            fontSize='xs'
+                        />
+                    )}
                 </ButtonGroup>
             </CardFooter>
         </Card>
